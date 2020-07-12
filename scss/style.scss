@@ -2,20 +2,19 @@ $primaryColor: #FFFFFF;
 $secFontFamily: 'Maven Pro', sans-serif;
 
 html, body {
-    scrollbar-color: #213668 #FBFBFB;     /* «цвет ползунка» «цвет полосы скроллбара» */
-    scrollbar-width: thin;  /* толщина */
+    scrollbar-color: #213668 #FBFBFB;
+    scrollbar-width: thin;
 }
 
 ::-webkit-scrollbar {
-    width: 5px; /* ширина для вертикального скролла */
-    height: 5px; /* высота для горизонтального скролла */
+    width: 5px;
+    height: 5px;
     background-color: #FBFBFB;
 }
 
 ::-webkit-scrollbar-thumb {
     background-color: #213668;
     border-radius: 9em;
-    // box-shadow: inset 1px 1px 10px #f3faf7;
 }
 
 ::-webkit-input-placeholder {
@@ -31,14 +30,14 @@ html, body {
     font-weight: normal;
     font-size: 14px;
     line-height: 36px;
-}/* Firefox 19+ */
+}
 :-moz-placeholder           {
     color: #6C78A8;
     text-transform: capitalize;
     font-weight: normal;
     font-size: 14px;
     line-height: 36px;
-}/* Firefox 18- */
+}
 :-ms-input-placeholder      {
     color: #6C78A8;
     text-transform: capitalize;
@@ -123,7 +122,6 @@ body {
         &__article {
             background-color: #FBFBFB;
             width: 70%;
-            // height: 973px;
             &-img {
                 margin-top: -10px;
                 width: 100%;
@@ -177,7 +175,6 @@ body {
         }
         &__aside {
             width: 27%;
-            // height: 973px;
             background-color: $primaryColor;
             border-radius: 10px;
             margin-top: -10px;
@@ -291,11 +288,6 @@ body {
             &--dark {
                 background: url('../images/illustration.svg') no-repeat 90% 50% #213668;
             }
-            // &-wrap {
-            //     display: flex;
-            //     flex-direction: column;
-            //     justify-content: flex-start;
-            // }
             &-date {
                 font-weight: normal;
                 font-size: 14px;
@@ -331,7 +323,6 @@ body {
                 width: 80px;
                 height: 24px;
                 text-align: center;
-                // text-transform: capitalize;
                 color: #9D9C9C;
                 border: 0.5px solid #9D9C9C;
                 border-radius: 4px;
@@ -343,7 +334,6 @@ body {
             }
         }
         &-main {
-            // height: 20%;
             padding: 16px 32px;
             display: flex;
             justify-content: space-between;
@@ -351,7 +341,6 @@ body {
             &-text {
                 display: block;
                 height: 65px;
-                // line-clamp: 3;
                 overflow: hidden;
                 text-overflow: ellipsis;
                 width: 55%;
@@ -388,12 +377,9 @@ body {
         -webkit-box-shadow: -11px 11px 104px 3px rgba(112,111,112,1);
         -moz-box-shadow: -11px 11px 104px 3px rgba(112,111,112,1);
         box-shadow: -11px 11px 104px 3px rgba(112,111,112,1);
-        // margin: 40px 0 0;
         max-width: 1360px;
         margin: 0 auto;
         display: flex;
-        // background: linear-gradient(179.35deg, #004BA2 -0.94%, #031634 112.54%);
-        // border-radius: 10px;
     }
     &-image {
         width: 50%;
@@ -413,7 +399,7 @@ body {
             border: none;
             border-bottom: 1px solid #FFFFFF;
             padding: 0 5px 0 35px;
-            margin: 0 auto 70px;
+            margin: 0 auto 10px;
             width: 70%;
             box-sizing: border-box;
             background: transparent;
@@ -424,19 +410,39 @@ body {
             &:nth-child(1) {
                 background: url('../images/Group\ copy\ 2.svg') no-repeat 3% 50% transparent;
             }
-            &:nth-child(2) {
+            &:nth-child(3) {
                 background: url('../images/Group\ copy.svg') no-repeat 3% 50% transparent;
             }
-            &:nth-child(3) {
+            &:nth-child(5) {
                 background: url('../images/Vector\ copy.svg') no-repeat 3% 50% transparent;
             }
-            &:nth-child(4) {
+            &:nth-child(7) {
                 background: url('../images/Group.svg') no-repeat 3% 50% transparent;
+            }
+            &--error {
+                border-bottom: 1px solid #FA8276;
+            }
+        }
+        &__input--checked{
+            &:nth-child(1) {
+                background: url('../images/Group\ copy\ 2.svg') no-repeat 3% 50%,
+                            url('../images/check.svg') no-repeat 97% 50%;
+            }
+            &:nth-child(3) {
+                background: url('../images/Group\ copy.svg') no-repeat 3% 50%,
+                            url('../images/check.svg') no-repeat 97% 50%;
+            }
+            &:nth-child(5) {
+                background: url('../images/Vector\ copy.svg') no-repeat 3% 50%,
+                            url('../images/check.svg') no-repeat 97% 50%;
+            }
+            &:nth-child(7) {
+                background: url('../images/Group.svg') no-repeat 3% 50%,
+                            url('../images/check.svg') no-repeat 97% 50%;
             }
         }
         &__label {
             display: flex;
-            // align-items: center;
             width: 70%;
             font-weight: normal;
             font-size: 14px;
@@ -446,12 +452,37 @@ body {
             cursor: pointer;
             vertical-align: middle;
         }
+        &__error {
+            position: relative;
+            box-sizing: border-box;
+            width: 70%;
+            margin: 0 auto;
+            padding-left: 25px;
+            margin-bottom: 30px;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 21px;
+            color: #FA8276;
+            background: url('../images/ic\ error.svg') no-repeat 0 50%;
+            visibility: hidden;
+            &--last {
+                margin: 5px auto;
+                border-top: 1px solid #FA8276;
+                padding-top: 10px;
+                background: url('../images/ic\ error.svg') no-repeat 0 80%;
+            }
+            &-sign {
+                position: absolute;
+                top: -36px;
+                right: 10px;
+            }
+
+        }
         &__button {
             display: inline-block;
             cursor: pointer;
-            // margin-top: 26px;
             border: none;
-            margin: 58px auto 0;
+            margin: 8px auto 0;
             width: 70%;
             height: 61px;
             background: #00B3FF;
@@ -468,51 +499,27 @@ body {
 }
 
 input[type="checkbox"] {
-  display: none;
+    display: none;
 }
  
-/* стили для метки */
-// label {
-//   color: #000;
-//   cursor: default;
-//   font-weight: normal;
-//   line-height: 30px;
-//   padding: 10px 0;
-//   vertical-align: middle;
-// }
- 
-/* формируем внешний вид чекбокса в псевдоэлементе before */
 label:before {
-  content: "";
-  color: $primaryColor;
-  display: inline-block;
-  width: 16px;
-  height: 14px;
-//   font: 20px/30px Arial;
-  margin-right: 10px;
-  position: relative;
-//   text-align: center;
-//   text-indent: 0px;
-  
-  background: transparent;
-  border: 1px solid #8798D9;
-  border-radius: 2px;
-//   border-image: initial;
-  vertical-align: middle;
+    content: "";
+    color: $primaryColor;
+    display: inline-block;
+    width: 16px;
+    height: 14px;
+    margin-right: 10px;
+    position: relative;
+    background: transparent;
+    border: 1px solid #8798D9;
+    border-radius: 2px;
+    vertical-align: middle;
 }
  
-/* вариации внешнего вида в зав-ти от статуса checkbox */
-/* checked */
 input:checked + label:before {
-  content: "";
-  background: url('../images/check.svg') no-repeat center center transparent;
+    content: "";
+    background: url('../images/check.svg') no-repeat center center transparent;
 }
-
-/* disabled */
-// input:disabled + label:before {
-//   background: #eee;
-//   color: #aaa;
-// }
 
 
   

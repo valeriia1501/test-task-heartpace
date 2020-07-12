@@ -1,16 +1,11 @@
-@charset "UTF-8";
 html, body {
   scrollbar-color: #213668 #FBFBFB;
-  /* «цвет ползунка» «цвет полосы скроллбара» */
   scrollbar-width: thin;
-  /* толщина */
 }
 
 ::-webkit-scrollbar {
   width: 5px;
-  /* ширина для вертикального скролла */
   height: 5px;
-  /* высота для горизонтального скролла */
   background-color: #FBFBFB;
 }
 
@@ -35,7 +30,6 @@ html, body {
   line-height: 36px;
 }
 
-/* Firefox 19+ */
 :-moz-placeholder {
   color: #6C78A8;
   text-transform: capitalize;
@@ -44,7 +38,6 @@ html, body {
   line-height: 36px;
 }
 
-/* Firefox 18- */
 :-ms-input-placeholder {
   color: #6C78A8;
   text-transform: capitalize;
@@ -404,7 +397,7 @@ body {
   border: none;
   border-bottom: 1px solid #FFFFFF;
   padding: 0 5px 0 35px;
-  margin: 0 auto 70px;
+  margin: 0 auto 10px;
   width: 70%;
   box-sizing: border-box;
   background: transparent;
@@ -416,14 +409,29 @@ body {
 .form-content__input:nth-child(1) {
   background: url("../images/Group copy 2.svg") no-repeat 3% 50% transparent;
 }
-.form-content__input:nth-child(2) {
+.form-content__input:nth-child(3) {
   background: url("../images/Group copy.svg") no-repeat 3% 50% transparent;
 }
-.form-content__input:nth-child(3) {
+.form-content__input:nth-child(5) {
   background: url("../images/Vector copy.svg") no-repeat 3% 50% transparent;
 }
-.form-content__input:nth-child(4) {
+.form-content__input:nth-child(7) {
   background: url("../images/Group.svg") no-repeat 3% 50% transparent;
+}
+.form-content__input--error {
+  border-bottom: 1px solid #FA8276;
+}
+.form-content__input--checked:nth-child(1) {
+  background: url("../images/Group copy 2.svg") no-repeat 3% 50%, url("../images/check.svg") no-repeat 97% 50%;
+}
+.form-content__input--checked:nth-child(3) {
+  background: url("../images/Group copy.svg") no-repeat 3% 50%, url("../images/check.svg") no-repeat 97% 50%;
+}
+.form-content__input--checked:nth-child(5) {
+  background: url("../images/Vector copy.svg") no-repeat 3% 50%, url("../images/check.svg") no-repeat 97% 50%;
+}
+.form-content__input--checked:nth-child(7) {
+  background: url("../images/Group.svg") no-repeat 3% 50%, url("../images/check.svg") no-repeat 97% 50%;
 }
 .form-content__label {
   display: flex;
@@ -436,11 +444,36 @@ body {
   cursor: pointer;
   vertical-align: middle;
 }
+.form-content__error {
+  position: relative;
+  box-sizing: border-box;
+  width: 70%;
+  margin: 0 auto;
+  padding-left: 25px;
+  margin-bottom: 30px;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 21px;
+  color: #FA8276;
+  background: url("../images/ic error.svg") no-repeat 0 50%;
+  visibility: hidden;
+}
+.form-content__error--last {
+  margin: 5px auto;
+  border-top: 1px solid #FA8276;
+  padding-top: 10px;
+  background: url("../images/ic error.svg") no-repeat 0 80%;
+}
+.form-content__error-sign {
+  position: absolute;
+  top: -36px;
+  right: 10px;
+}
 .form-content__button {
   display: inline-block;
   cursor: pointer;
   border: none;
-  margin: 58px auto 0;
+  margin: 8px auto 0;
   width: 70%;
   height: 61px;
   background: #00B3FF;
@@ -458,8 +491,6 @@ input[type=checkbox] {
   display: none;
 }
 
-/* стили для метки */
-/* формируем внешний вид чекбокса в псевдоэлементе before */
 label:before {
   content: "";
   color: #FFFFFF;
@@ -474,13 +505,9 @@ label:before {
   vertical-align: middle;
 }
 
-/* вариации внешнего вида в зав-ти от статуса checkbox */
-/* checked */
 input:checked + label:before {
   content: "";
   background: url("../images/check.svg") no-repeat center center transparent;
 }
-
-/* disabled */
 
 /*# sourceMappingURL=style.css.map */
