@@ -1,0 +1,228 @@
+$primaryColor: #FFFFFF;
+$secFontFamily: 'Maven Pro', sans-serif;
+
+html, body {
+    scrollbar-color: #213668 #FBFBFB;     /* «цвет ползунка» «цвет полосы скроллбара» */
+    scrollbar-width: thin;  /* толщина */
+}
+
+::-webkit-scrollbar {
+    width: 5px; /* ширина для вертикального скролла */
+    height: 5px; /* высота для горизонтального скролла */
+    background-color: #FBFBFB;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #213668;
+    border-radius: 9em;
+    // box-shadow: inset 1px 1px 10px #f3faf7;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(118.35deg, #002092 13.19%, #0083B8 31.22%, #9EE0C6 49.16%, #0180B6 71.37%, #002A95 110.22%) no-repeat;
+}
+
+.container {
+    max-width: 1243px;
+    margin: 0 auto;
+    padding: 60px 5px 40px;
+}
+
+.back {
+    text-decoration: none;
+    display: flex;
+    &__img {
+        margin-right: 8px;
+        width: 24px;
+        height: 24px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 5px;
+        &-svg {
+            display: flex;
+            height: 24px;
+            margin: auto;
+        }
+    }
+    &__text {
+        display: inline-block;
+        font-size: 14px;
+        font-weight: 800;
+        line-height: 24px;
+        color: $primaryColor;
+        text-decoration-line: underline;
+        text-transform: uppercase;
+    }
+}
+
+.main {
+    &__head {
+        padding: 60px 5px 25px;
+        width: 70%;
+        display: flex;
+        justify-content: space-between;
+        &-h2 {
+            max-width: 511px;
+            font-family: $secFontFamily;
+            font-weight: 900;
+            font-size: 26px;
+            line-height: 36px;
+            text-shadow: 0px 2px 4px rgba(0, 63, 157, 0.6);
+            text-transform: uppercase;
+            color: $primaryColor;
+        }
+        &-date {
+            display: flex;
+            align-items: flex-end;
+            padding-bottom: 10px;
+            &--text {
+                font-weight: normal;
+                font-size: 14px;
+                line-height: 18px;
+                padding-left: 8px;
+                text-transform: capitalize;
+                color: $primaryColor;
+            }
+        }
+    }
+
+    &-content {
+        display: flex;
+        justify-content: space-between;
+        &__article {
+            background-color: #FBFBFB;
+            width: 70%;
+            // height: 973px;
+            &-img {
+                margin-top: -10px;
+                width: 100%;
+                height: 215px;
+                border-radius: 10px 10px 130px 0;
+                background: url('../images/Group\ 28.svg') no-repeat center center #213668;
+            }
+            &-head {
+                padding: 25px 32px;
+                border-bottom: 1px solid #F1F1F1;
+                font-weight: normal;
+                font-size: 14px;
+                line-height: 21px;
+                text-transform: capitalize;
+                color: #2463A0;
+            }
+            &-space {
+                width: 100%;
+                height: 36px;
+                background-color: #FBFBFB;
+            }
+            &-text {
+                width: 90%;
+                overflow: auto;
+                height: 490px;
+                padding: 0 32px 83px;
+            }
+            &-main {
+                font-weight: normal;
+                font-size: 14px;
+                line-height: 21px;
+                padding-bottom: 65px;
+                color: #3C3C3C;
+                &:last-child {
+                    padding-bottom: 0;
+                }
+            }
+            &-h3 {
+                text-transform: uppercase;
+                color: #3EACB3;
+                font-weight: bold;
+            }
+            &-a {
+                display: inline-block;
+                width: 100%;
+                height: 78px;
+                background: url('../images/Vector.svg') no-repeat 50% 40% #F1F1F1;
+                margin-bottom: -10px;
+                border-radius: 0 0 10px 10px;
+            }
+        }
+        &__aside {
+            width: 25%;
+            // height: 973px;
+            background-color: $primaryColor;
+            border-radius: 10px;
+            margin-top: -10px;
+            &-h2 {
+                font-family: $secFontFamily;
+                font-weight: 900;
+                font-size: 26px;
+                line-height: 36px;
+                text-transform: uppercase;
+                color: #3C3C3C;
+                padding: 37px 18px 28px;
+            }
+            &-h3 {
+                font-weight: bold;
+                font-size: 16px;
+                line-height: 21px;
+                text-transform: uppercase;
+                color: #3EACB3;
+                padding: 0 16px 30px    ;
+            }
+            &-img {
+                width: 253px;
+                margin: 0 auto;
+                border-radius: 5px;
+                height: 345px;
+                background: url('../images/book.svg') no-repeat 50% 20% ;
+                -webkit-box-shadow: -7px 7px 18px 7px rgba(228,226,252,0.53);
+                -moz-box-shadow: -7px 7px 18px 7px rgba(228,226,252,0.53);
+                box-shadow: -7px 7px 18px 7px rgba(228,226,252,0.53);
+            }
+            &-h4 {
+                font-weight: bold;
+                font-size: 16px;
+                line-height: 21px;
+                text-transform: uppercase;
+                color: #2463A0;
+                padding: 50px 16px 27px;
+            }
+            &-container {
+                width: 95%;
+                height: 303px;
+                overflow: auto;
+            }
+            &-block {
+                padding-bottom: 45px;    
+                &-date {
+                    font-weight: normal;
+                    font-size: 14px;
+                    line-height: 21px;
+                    color: #5C5C5C;
+                    border-bottom: 1px solid #F1F1F1;
+                    padding: 0 16px 8px;
+                    text-align: right;
+
+                } 
+                &-name {
+                    font-weight: normal;
+                    font-size: 14px;
+                    line-height: 21px;
+                    color: #3C3C3C;
+                    padding: 8px 16px 0;
+                }
+            }
+            &-space {
+                width: 100%;
+                height: 36px;
+                background-color: $primaryColor;
+            }
+            &-bottom {
+                width: 100%;
+                height: 78px;
+                background: #F1F1F1;
+                margin-bottom: -10px;
+                border-radius: 0 0 10px 10px; 
+            }
+        }
+    }
+}
+  
