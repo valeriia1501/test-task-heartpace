@@ -18,15 +18,45 @@ html, body {
     // box-shadow: inset 1px 1px 10px #f3faf7;
 }
 
+::-webkit-input-placeholder {
+    color: #6C78A8;
+    text-transform: capitalize;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 36px;
+}
+::-moz-placeholder          {
+    color: #6C78A8;
+    text-transform: capitalize;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 36px;
+}/* Firefox 19+ */
+:-moz-placeholder           {
+    color: #6C78A8;
+    text-transform: capitalize;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 36px;
+}/* Firefox 18- */
+:-ms-input-placeholder      {
+    color: #6C78A8;
+    text-transform: capitalize;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 36px;
+}
+
 body {
     font-family: 'Montserrat', sans-serif;
     background: linear-gradient(118.35deg, #002092 13.19%, #0083B8 31.22%, #9EE0C6 49.16%, #0180B6 71.37%, #002A95 110.22%) no-repeat;
+    padding-bottom: 130px;
 }
 
 .container {
     max-width: 1243px;
     margin: 0 auto;
-    padding: 60px 5px 40px;
+    padding: 60px 5px 50px;
 }
 
 .back {
@@ -56,6 +86,7 @@ body {
 }
 
 .main {
+    padding-bottom: 40px;
     &__head {
         padding: 60px 5px 25px;
         width: 70%;
@@ -145,7 +176,7 @@ body {
             }
         }
         &__aside {
-            width: 25%;
+            width: 27%;
             // height: 973px;
             background-color: $primaryColor;
             border-radius: 10px;
@@ -225,4 +256,263 @@ body {
         }
     }
 }
+
+.news {
+    padding: 40px 0 0;
+    &__block {
+        display: flex;
+        justify-content: space-between;
+        align-items: stretch;
+        padding-bottom: 30px;
+    }
+    &__item {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        border-radius: 10px;
+        background: #F1F1F1;
+        &--s {
+            width: 45%;
+        }
+        &--m {
+            width: 52%;
+        }
+        &--first {
+            background: $primaryColor;
+        }
+        &-header {
+            min-height: 60%;
+            padding: 15px 35px 10px;
+            background: $primaryColor;
+            border-radius: 10px 10px 101.5px 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            &--dark {
+                background: url('../images/illustration.svg') no-repeat 90% 50% #213668;
+            }
+            // &-wrap {
+            //     display: flex;
+            //     flex-direction: column;
+            //     justify-content: flex-start;
+            // }
+            &-date {
+                font-weight: normal;
+                font-size: 14px;
+                line-height: 17px;
+                text-transform: capitalize;
+                color: #5C5C5C;
+                &--white {
+                    color: $primaryColor;
+                }
+            }
+            &-h2 {
+                font-family: $secFontFamily;
+                width: 90%;
+                padding: 19px 0 0;
+                font-weight: 900;
+                font-size: 26px;
+                line-height: 36px;
+                text-transform: uppercase;
+                color: #3C3C3C;
+                &--white {
+                    color: $primaryColor;
+                }
+                &--m {
+                    width: 70%; 
+                }
+            }
+            &-a {
+                display: inline-block;
+                font-weight: normal;
+                font-size: 8px;
+                line-height: 24px;
+                text-decoration: none;
+                width: 80px;
+                height: 24px;
+                text-align: center;
+                // text-transform: capitalize;
+                color: #9D9C9C;
+                border: 0.5px solid #9D9C9C;
+                border-radius: 4px;
+                margin: 0 2px;
+                &--first {
+                    border: 0.5px solid #F1F1F1;
+                    color: #F1F1F1; 
+                }
+            }
+        }
+        &-main {
+            // height: 20%;
+            padding: 16px 32px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            &-text {
+                display: block;
+                height: 65px;
+                // line-clamp: 3;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                width: 55%;
+                font-weight: normal;
+                font-size: 14px;
+                line-height: 21px;
+                text-transform: capitalize;
+                color: #3C3C3C;
+            }
+            &-a {
+                text-decoration: none;
+                font-weight: normal;
+                font-size: 14px;
+                line-height: 21px;
+                text-transform: capitalize;
+                color: #008ECC;
+                &--first {
+                    display: inline-block;
+                    width: 128px;
+                    height: 40px;
+                    background: #FA8276;
+                    border-radius: 4px;
+                    color: $primaryColor;
+                    text-align: center;
+                    line-height: 40px;
+                }
+            }
+        }
+    }
+}
+
+.form {
+    &-container {
+        -webkit-box-shadow: -11px 11px 104px 3px rgba(112,111,112,1);
+        -moz-box-shadow: -11px 11px 104px 3px rgba(112,111,112,1);
+        box-shadow: -11px 11px 104px 3px rgba(112,111,112,1);
+        // margin: 40px 0 0;
+        max-width: 1360px;
+        margin: 0 auto;
+        display: flex;
+        // background: linear-gradient(179.35deg, #004BA2 -0.94%, #031634 112.54%);
+        // border-radius: 10px;
+    }
+    &-image {
+        width: 50%;
+        border-radius: 10px 0px 0px 10px;
+        background: url('../images/free-book-cover.png') no-repeat center center / 549px 532px #F7F7F7;
+    }
+    &-content {
+        background: linear-gradient(179.35deg, #004BA2 -0.94%, #031634 112.54%);
+        border-radius: 0px 10px 10px 0px;
+        padding: 80px;
+        box-sizing: border-box;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        &__input {
+            outline: none;
+            border: none;
+            border-bottom: 1px solid #FFFFFF;
+            padding: 0 5px 0 35px;
+            margin: 0 auto 70px;
+            width: 70%;
+            box-sizing: border-box;
+            background: transparent;
+            font-weight: normal;
+            font-size: 18px;
+            line-height: 36px;
+            color: #FFFFFF;
+            &:nth-child(1) {
+                background: url('../images/Group\ copy\ 2.svg') no-repeat 3% 50% transparent;
+            }
+            &:nth-child(2) {
+                background: url('../images/Group\ copy.svg') no-repeat 3% 50% transparent;
+            }
+            &:nth-child(3) {
+                background: url('../images/Vector\ copy.svg') no-repeat 3% 50% transparent;
+            }
+            &:nth-child(4) {
+                background: url('../images/Group.svg') no-repeat 3% 50% transparent;
+            }
+        }
+        &__label {
+            display: flex;
+            // align-items: center;
+            width: 70%;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 20px;
+            color: $primaryColor;
+            margin: 0 auto;
+            cursor: pointer;
+            vertical-align: middle;
+        }
+        &__button {
+            display: inline-block;
+            cursor: pointer;
+            // margin-top: 26px;
+            border: none;
+            margin: 58px auto 0;
+            width: 70%;
+            height: 61px;
+            background: #00B3FF;
+            border-radius: 4px;
+            font-family: $secFontFamily;
+            font-weight: 900;
+            font-size: 18px;
+            line-height: 61px;
+            text-align: center;
+            text-transform: uppercase;
+            color: $primaryColor;
+        }
+    }
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+ 
+/* стили для метки */
+// label {
+//   color: #000;
+//   cursor: default;
+//   font-weight: normal;
+//   line-height: 30px;
+//   padding: 10px 0;
+//   vertical-align: middle;
+// }
+ 
+/* формируем внешний вид чекбокса в псевдоэлементе before */
+label:before {
+  content: "";
+  color: $primaryColor;
+  display: inline-block;
+  width: 16px;
+  height: 14px;
+//   font: 20px/30px Arial;
+  margin-right: 10px;
+  position: relative;
+//   text-align: center;
+//   text-indent: 0px;
+  
+  background: transparent;
+  border: 1px solid #8798D9;
+  border-radius: 2px;
+//   border-image: initial;
+  vertical-align: middle;
+}
+ 
+/* вариации внешнего вида в зав-ти от статуса checkbox */
+/* checked */
+input:checked + label:before {
+  content: "";
+  background: url('../images/check.svg') no-repeat center center transparent;
+}
+
+/* disabled */
+// input:disabled + label:before {
+//   background: #eee;
+//   color: #aaa;
+// }
+
+
   
